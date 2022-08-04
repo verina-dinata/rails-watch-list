@@ -1,0 +1,10 @@
+<h1>Bookmark a movie</h1>
+
+<%# <%= render "form_bookmark", bookmark: @bookmark %> %>
+
+<%= simple_form_for [@bookmark, @list] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.association :list %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: url('<%= @list.picture_url %>')">
+  <div>
+    <h2><%= @list.name %></h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="list-flex">
+    <%= link_to "Add a movie", new_list_bookmark_path, class: "btn btn-primary"%>
+  </div>
+  <% @list.movies.each do |movie| %>
+    <%# <% movie = bookmark. %> %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%=  movie.poster_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= movie.title %></h5>
+        <p><%= movie.rating %></p>
+        <p class="card-text"><%= movie.overview %></p>
+        <%# <p><strong>"</strong><%= bookmark.comment %></p> %>
+        <%= link_to "delete", list_bookmarks_path(@list) , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
+    </div>
+  <% end %>
+</div>

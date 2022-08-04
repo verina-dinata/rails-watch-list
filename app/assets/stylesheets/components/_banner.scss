@@ -1,0 +1,19 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font: headers-font;
+
+  }
+
+  h4 {
+    text-align: center;
+    opacity: 0.7;
+  }
+}
