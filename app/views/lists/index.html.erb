@@ -14,7 +14,12 @@
     <% @lists.each do |list| %>
       <div class="col-md-4">
         <div class="list-card">
-
+          <%= link_to list_path(list) %>
+            <div class="list-card-image" style="background-image: url('<%= cl_image_path list.photo.key %>');">
+              <div class="list-card-title">
+                <h5 class="decoration-body title-text"><%= list.name %></h5>
+              </div>
+            </div>
         </div>
       </div>
     <% end %>
