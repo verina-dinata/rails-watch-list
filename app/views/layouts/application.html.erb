@@ -11,13 +11,15 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light ">
-      <a class="navbar-brand" href="#">Fixed top</a>
-      <div class="ms-auto">
-        <%= link_to "My lists",  lists_path%>
-        <%= link_to "New list",  new_list_path%>
-      </div>
-    </nav>
+    <div class="header-container">
+      <nav class="navbar navbar-light bg-light ">
+        <%= link_to image_tag("https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar"), root_path %>
+        <div class="ms-auto">
+          <%= link_to "My lists",  lists_path, class: "decoration-header"%>
+          <%= link_to "New list",  new_list_path, class: "decoration-header"%>
+        </div>
+      </nav>
+    </div>
 
     <%= yield %>
   </body>
