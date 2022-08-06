@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url('felix-mooneeram-evlkOfkQ5rE-unsplash.jpg');">
+<div class="banner" style="background-image: url( <%= asset_path 'felix-mooneeram-evlkOfkQ5rE-unsplash.jpg' %>);">
   <div>
     <h2>Save any kind of movies</h2>
     <h4>Classic</h4>
@@ -15,7 +15,7 @@
       <div class="col-md-4">
         <div class="list-card">
           <%= link_to list_path(list) do %>
-            <div class="list-card-image" style="background-image: url('<%= list.picture_url %>');">
+            <div class="list-card-image" style="background-image: url('<%= asset_path list.picture_url %>');">
               <div class="list-card-title">
                 <h5><%= list.name %></h5>
               </div>

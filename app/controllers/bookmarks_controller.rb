@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = @list.bookmarks.new(bookmark_params)
-    @bookmark.save
+    flash[:notice] = @bookmark.errors.full_messages.to_sentence unless @bookmark.save
     redirect_to list_path(@list)
   end
 
