@@ -4,5 +4,4 @@ class List < ApplicationRecord
 
   validates :name, uniqueness: true
   validates :name, presence: true
-  validates :picture_url, presence: true
 end
